@@ -2,5 +2,6 @@
 
 #include "driverlib.h"
 
+void GPIO_Init(void);
 
 #endif

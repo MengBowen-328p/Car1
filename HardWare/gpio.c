@@ -1,6 +1,6 @@
 #include "gpio.h"
 
-void GPIO_Init()
+void GPIO_Init(void)
 {
     GPIO_setAsOutputPin(
             GPIO_PORT_P6,
