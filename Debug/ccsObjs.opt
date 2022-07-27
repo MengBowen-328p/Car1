@@ -1,4 +1,5 @@
 "./main.obj"
+"./HardWare/gpio.obj"
 "./drivelib/adc10_a.obj"
 "./drivelib/adc12_a.obj"
 "./drivelib/aes.obj"
