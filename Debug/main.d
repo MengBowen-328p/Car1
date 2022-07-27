@@ -1,13 +1,14 @@
 # FIXED
 
 main.obj: ../main.c
-main.obj: C:/Users/15216/workspace_v12/Car1/drivelib/driverlib.h
-main.obj: C:/Users/15216/workspace_v12/Car1/drivelib/inc/hw_memmap.h
 main.obj: C:/TI/ccs1200/ccs/ccs_base/msp430/include/msp430.h
 main.obj: C:/TI/ccs1200/ccs/ccs_base/msp430/include/msp430f5529.h
 main.obj: C:/TI/ccs1200/ccs/ccs_base/msp430/include/in430.h
 main.obj: C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/intrinsics.h
 main.obj: C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/intrinsics_legacy_undefs.h
+main.obj: C:/Users/15216/workspace_v12/Car1/HardWare/gpio.h
+main.obj: C:/Users/15216/workspace_v12/Car1/drivelib/driverlib.h
+main.obj: C:/Users/15216/workspace_v12/Car1/drivelib/inc/hw_memmap.h
 main.obj: C:/TI/ccs1200/ccs/ccs_base/msp430/include/msp430f5xx_6xxgeneric.h
 main.obj: C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/stdint.h
 main.obj: C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/_ti_config.h
@@ -61,12 +62,14 @@ main.obj: C:/Users/15216/workspace_v12/Car1/drivelib/usci_a_spi.h
 main.obj: C:/Users/15216/workspace_v12/Car1/drivelib/lcd_b.h
 main.obj: C:/Users/15216/workspace_v12/Car1/drivelib/flashctl.h
 main.obj: C:/Users/15216/workspace_v12/Car1/drivelib/crc.h
+main.obj: C:/Users/15216/workspace_v12/Car1/HardWare/car.h
+main.obj: C:/Users/15216/workspace_v12/Car1/drivelib/driverlib.h
+main.obj: C:/Users/15216/workspace_v12/Car1/HardWare/pwm.h
+main.obj: C:/Users/15216/workspace_v12/Car1/drivelib/driverlib.h
+main.obj: C:/Users/15216/workspace_v12/Car1/HardWare/delay.h
+main.obj: C:/Users/15216/workspace_v12/Car1/drivelib/driverlib.h
 
 ../main.c:
-
-C:/Users/15216/workspace_v12/Car1/drivelib/driverlib.h:
-
-C:/Users/15216/workspace_v12/Car1/drivelib/inc/hw_memmap.h:
 
 C:/TI/ccs1200/ccs/ccs_base/msp430/include/msp430.h:
 
@@ -77,6 +80,12 @@ C:/TI/ccs1200/ccs/ccs_base/msp430/include/in430.h:
 C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/intrinsics.h:
 
 C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include/intrinsics_legacy_undefs.h:
+
+C:/Users/15216/workspace_v12/Car1/HardWare/gpio.h:
+
+C:/Users/15216/workspace_v12/Car1/drivelib/driverlib.h:
+
+C:/Users/15216/workspace_v12/Car1/drivelib/inc/hw_memmap.h:
 
 C:/TI/ccs1200/ccs/ccs_base/msp430/include/msp430f5xx_6xxgeneric.h:
 
@@ -183,4 +192,16 @@ C:/Users/15216/workspace_v12/Car1/drivelib/lcd_b.h:
 C:/Users/15216/workspace_v12/Car1/drivelib/flashctl.h:
 
 C:/Users/15216/workspace_v12/Car1/drivelib/crc.h:
+
+C:/Users/15216/workspace_v12/Car1/HardWare/car.h:
+
+C:/Users/15216/workspace_v12/Car1/drivelib/driverlib.h:
+
+C:/Users/15216/workspace_v12/Car1/HardWare/pwm.h:
+
+C:/Users/15216/workspace_v12/Car1/drivelib/driverlib.h:
+
+C:/Users/15216/workspace_v12/Car1/HardWare/delay.h:
+
+C:/Users/15216/workspace_v12/Car1/drivelib/driverlib.h:
 

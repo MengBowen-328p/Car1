@@ -11,8 +11,11 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./main.obj" \
+"./HardWare/Encoder.obj" \
 "./HardWare/car.obj" \
+"./HardWare/delay.obj" \
 "./HardWare/gpio.obj" \
+"./HardWare/pwm.obj" \
 "./drivelib/adc10_a.obj" \
 "./drivelib/adc12_a.obj" \
 "./drivelib/aes.obj" \
@@ -188,7 +191,7 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 Car1.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: MSP430 Linker'
-	"C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --define=__MSP430F5529__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 -z -m"Car1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/TI/ccs1200/ccs/ccs_base/msp430/include" -i"C:/Users/15216/workspace_v12/Car1/drivelib" -i"C:/TI/ccs1200/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/lib" -i"C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Car1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Car1.out" $(ORDERED_OBJS)
+	"C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --define=__MSP430F5529__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 -z -m"Car1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/TI/ccs1200/ccs/ccs_base/msp430/include" -i"C:/Users/15216/workspace_v12/Car1/HardWare" -i"C:/Users/15216/workspace_v12/Car1/drivelib" -i"C:/TI/ccs1200/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/lib" -i"C:/TI/ccs1200/ccs/tools/compiler/ti-cgt-msp430_21.6.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Car1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Car1.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
@@ -202,8 +205,8 @@ Car1.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" "HardWare\car.obj" "HardWare\gpio.obj" "drivelib\adc10_a.obj" "drivelib\adc12_a.obj" "drivelib\aes.obj" "drivelib\battbak.obj" "drivelib\comp_b.obj" "drivelib\crc.obj" "drivelib\ctsd16.obj" "drivelib\dac12_a.obj" "drivelib\dma.obj" "drivelib\eusci_a_spi.obj" "drivelib\eusci_a_uart.obj" "drivelib\eusci_b_i2c.obj" "drivelib\eusci_b_spi.obj" "drivelib\flashctl.obj" "drivelib\gpio.obj" "drivelib\lcd_b.obj" "drivelib\lcd_c.obj" "drivelib\ldopwr.obj" "drivelib\mpy32.obj" "drivelib\oa.obj" "drivelib\pmap.obj" "drivelib\pmm.obj" "drivelib\ram.obj" "drivelib\ref.obj" "drivelib\rtc_a.obj" "drivelib\rtc_b.obj" "drivelib\rtc_c.obj" "drivelib\sd24_b.obj" "drivelib\sfr.obj" "drivelib\sysctl.obj" "drivelib\tec.obj" "drivelib\timer_a.obj" "drivelib\timer_b.obj" "drivelib\timer_d.obj" "drivelib\tlv.obj" "drivelib\ucs.obj" "drivelib\usci_a_spi.obj" "drivelib\usci_a_uart.obj" "drivelib\usci_b_i2c.obj" "drivelib\usci_b_spi.obj" "drivelib\wdt_a.obj" 
-	-$(RM) "main.d" "HardWare\car.d" "HardWare\gpio.d" "drivelib\adc10_a.d" "drivelib\adc12_a.d" "drivelib\aes.d" "drivelib\battbak.d" "drivelib\comp_b.d" "drivelib\crc.d" "drivelib\ctsd16.d" "drivelib\dac12_a.d" "drivelib\dma.d" "drivelib\eusci_a_spi.d" "drivelib\eusci_a_uart.d" "drivelib\eusci_b_i2c.d" "drivelib\eusci_b_spi.d" "drivelib\flashctl.d" "drivelib\gpio.d" "drivelib\lcd_b.d" "drivelib\lcd_c.d" "drivelib\ldopwr.d" "drivelib\mpy32.d" "drivelib\oa.d" "drivelib\pmap.d" "drivelib\pmm.d" "drivelib\ram.d" "drivelib\ref.d" "drivelib\rtc_a.d" "drivelib\rtc_b.d" "drivelib\rtc_c.d" "drivelib\sd24_b.d" "drivelib\sfr.d" "drivelib\sysctl.d" "drivelib\tec.d" "drivelib\timer_a.d" "drivelib\timer_b.d" "drivelib\timer_d.d" "drivelib\tlv.d" "drivelib\ucs.d" "drivelib\usci_a_spi.d" "drivelib\usci_a_uart.d" "drivelib\usci_b_i2c.d" "drivelib\usci_b_spi.d" "drivelib\wdt_a.d" 
+	-$(RM) "main.obj" "HardWare\Encoder.obj" "HardWare\car.obj" "HardWare\delay.obj" "HardWare\gpio.obj" "HardWare\pwm.obj" "drivelib\adc10_a.obj" "drivelib\adc12_a.obj" "drivelib\aes.obj" "drivelib\battbak.obj" "drivelib\comp_b.obj" "drivelib\crc.obj" "drivelib\ctsd16.obj" "drivelib\dac12_a.obj" "drivelib\dma.obj" "drivelib\eusci_a_spi.obj" "drivelib\eusci_a_uart.obj" "drivelib\eusci_b_i2c.obj" "drivelib\eusci_b_spi.obj" "drivelib\flashctl.obj" "drivelib\gpio.obj" "drivelib\lcd_b.obj" "drivelib\lcd_c.obj" "drivelib\ldopwr.obj" "drivelib\mpy32.obj" "drivelib\oa.obj" "drivelib\pmap.obj" "drivelib\pmm.obj" "drivelib\ram.obj" "drivelib\ref.obj" "drivelib\rtc_a.obj" "drivelib\rtc_b.obj" "drivelib\rtc_c.obj" "drivelib\sd24_b.obj" "drivelib\sfr.obj" "drivelib\sysctl.obj" "drivelib\tec.obj" "drivelib\timer_a.obj" "drivelib\timer_b.obj" "drivelib\timer_d.obj" "drivelib\tlv.obj" "drivelib\ucs.obj" "drivelib\usci_a_spi.obj" "drivelib\usci_a_uart.obj" "drivelib\usci_b_i2c.obj" "drivelib\usci_b_spi.obj" "drivelib\wdt_a.obj" 
+	-$(RM) "main.d" "HardWare\Encoder.d" "HardWare\car.d" "HardWare\delay.d" "HardWare\gpio.d" "HardWare\pwm.d" "drivelib\adc10_a.d" "drivelib\adc12_a.d" "drivelib\aes.d" "drivelib\battbak.d" "drivelib\comp_b.d" "drivelib\crc.d" "drivelib\ctsd16.d" "drivelib\dac12_a.d" "drivelib\dma.d" "drivelib\eusci_a_spi.d" "drivelib\eusci_a_uart.d" "drivelib\eusci_b_i2c.d" "drivelib\eusci_b_spi.d" "drivelib\flashctl.d" "drivelib\gpio.d" "drivelib\lcd_b.d" "drivelib\lcd_c.d" "drivelib\ldopwr.d" "drivelib\mpy32.d" "drivelib\oa.d" "drivelib\pmap.d" "drivelib\pmm.d" "drivelib\ram.d" "drivelib\ref.d" "drivelib\rtc_a.d" "drivelib\rtc_b.d" "drivelib\rtc_c.d" "drivelib\sd24_b.d" "drivelib\sfr.d" "drivelib\sysctl.d" "drivelib\tec.d" "drivelib\timer_a.d" "drivelib\timer_b.d" "drivelib\timer_d.d" "drivelib\tlv.d" "drivelib\ucs.d" "drivelib\usci_a_spi.d" "drivelib\usci_a_uart.d" "drivelib\usci_b_i2c.d" "drivelib\usci_b_spi.d" "drivelib\wdt_a.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
